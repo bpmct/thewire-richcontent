@@ -7,6 +7,7 @@
 .twrc-area .twrc-submit {
 
     text-align: right;
+    margin-left: auto;
 
 }
 
