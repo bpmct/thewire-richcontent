@@ -27,10 +27,10 @@ function twrc_init() {
         elgg_extend_view('elgg.css', 'twrc-example/css');
 
         //Let's add our custom flamingo add action
-        elgg_register_plugin_hook_handler('twrc', 'add', 'example_hook');
+        elgg_register_plugin_hook_handler('twrc', 'add', 'demo_hook');
 
         //Example hooks that runs right a wire post was created
-        function example_hook($hook, $type, $fields, $entity) {
+        function demo_hook($hook, $type, $fields, $entity) {
 
             //Add's the "flamingo" as an annotation to a wire post
             $entity->annotate('flamingo', $fields['rc_flamingo'], $entity->access_id);

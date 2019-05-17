@@ -6,41 +6,17 @@
 
 <br /><br />
 
-<label id="twrc_plugins">Plugins extending the wire actions:</label>
+<label id="twrc_plugins">Hooks extending the wire actions:</label><br />
 
 <?php 
 
 $extending = elgg_get_plugin_setting('plugins_extending', 'thewire-richcontent');
 
-print_r($extending);
+foreach (elgg_get_ordered_hook_handlers("twrc", "add") as $hook) {
+
+    echo "- $hook <br />";
+
+}
 
 ?>
 <br /><br />
-<table class="elgg-table" id="twrc_plugins">
-    <thead>
-        <tr>
-            <th>plugin name</th>
-            <th>file location</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>value 1</td>
-            <td>value 2</td>
-        </tr>
-        <tr>
-            <td>value 1</td>
-            <td>value 2</td>
-        </tr>
-        <tr>
-            <td>value 1</td>
-            <td>value 2</td>
-        </tr>
-        <tr>
-            <td>value 1</td>
-            <td>value 2</td>
-        </tr>
-    </tbody>
-</table>
-
-<br />
