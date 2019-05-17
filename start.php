@@ -11,6 +11,7 @@ function twrc_init() {
     elgg_extend_view('object/thewire', 'twrc/thewire');
     elgg_extend_view('river/elements/body', 'twrc/river');
 
+    //Demo Functions
     if ((elgg_get_plugin_setting('demo', 'thewire-richcontent') == "true")) {
 
         //Adds the buttons to add the pictures to a user's wire post
